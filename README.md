@@ -1,6 +1,18 @@
-# DeepEval API Wrapper - Render Deployment
+# DeepEval API Wrapper
 
-A simple REST API wrapper for DeepEval that demonstrates easy deployment to Render.com.
+## What is DeepEval?
+
+[DeepEval](https://github.com/confident-ai/deepeval) is the leading open-source LLM evaluation framework with over 10,500 stars on GitHub. 
+
+Built by the team at Confident AI, DeepEval provides a comprehensive suite of 25+ research-backed metrics for evaluating Large Language Model applications. 
+
+From RAG systems to conversational AI, DeepEval offers metrics for faithfulness, answer relevancy, contextual precision, bias detection, toxicity screening, and much more - making it the go-to solution for developers who need reliable, human-like accuracy in their LLM evaluations.
+
+## The Wrapper
+
+This REST API wrapper brings DeepEval's powerful evaluation capabilities to any application through simple HTTP endpoints. 
+
+Whether you're building n8n AI agents, automated testing pipelines, or integrating LLM evaluation into existing systems, this wrapper provides an easy-to-deploy solution.
 
 ## 🚀 Quick Deploy to Render
 
@@ -84,7 +96,7 @@ This is an early version of the DeepEval API wrapper. While the core functionali
 If you're interested in learning how to use and this DeepEval Wrapper for your n8n AI Agents, join our community, The AI Automators.
 
 https://www.theaiautomators.com/
-
+ex
 ## 🤝 Contributing
 
 Contributions make the open-source community an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
