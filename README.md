@@ -96,7 +96,7 @@ This is an early version of the DeepEval API wrapper. While the core functionali
 If you're interested in learning how to use and this DeepEval Wrapper for your n8n AI Agents, join our community, The AI Automators.
 
 https://www.theaiautomators.com/
-ex
+
 ## 🤝 Contributing
 
 Contributions make the open-source community an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
