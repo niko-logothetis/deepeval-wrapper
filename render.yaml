@@ -1,0 +1,47 @@
+services:
+  - type: web
+    name: deepeval-api
+    runtime: python3
+    rootDir: .
+    buildCommand: pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    plan: starter
+    branch: main
+    healthCheckPath: /health
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ADMIN_USERNAME
+        value: admin
+      - key: ADMIN_PASSWORD
+        generateValue: true
+      - key: API_KEYS
+        generateValue: true
+      - key: DEBUG
+        value: false
+      - key: LOG_LEVEL
+        value: INFO
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: 10000
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: 30
+      - key: DEFAULT_MAX_CONCURRENT
+        value: 5
+      - key: DEFAULT_TIMEOUT
+        value: 900
+      - key: MAX_FILE_SIZE
+        value: 10485760
+      # LLM API Keys - set these in Render dashboard
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: DEEPEVAL_API_KEY
+        sync: false
+      # Simple in-memory storage (no Redis needed)
+      - key: USE_REDIS
+        value: false
