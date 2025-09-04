@@ -70,6 +70,11 @@ curl -X POST "https://your-app.onrender.com/evaluate" \
     ]
   }'
 ```
+## Example n8n Workflows
+
+There are two example n8n workflows in the n8n folder of the repo.
+
+You can import these into n8n to test out some of the DeepEval metrics and how the flow would look from triggering to evaluating when testing your agents or systems.
 
 ## 🎯 DeepEval Metrics
 
