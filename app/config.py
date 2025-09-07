@@ -5,6 +5,8 @@ from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     """Application settings."""
+
+    model_config = SettingsConfigDict(extra='ignore')
     
     # API Configuration
     app_name: str = "DeepEval REST API Wrapper"
