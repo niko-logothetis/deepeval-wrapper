@@ -1,11 +1,12 @@
 import os
 from typing import Optional, List
-from pydantic_settings import BaseSettings, SettingsConfigDict 
-
+from pydantic_settings import BaseSettings, SettingsConfigDict # Add this import
 
 class Settings(BaseSettings):
     """Application settings."""
-
+    
+    # This line tells Pydantic to ignore any extra environment variables
+    # that are not defined in this class.
     model_config = SettingsConfigDict(extra='ignore')
     
     # API Configuration
@@ -64,10 +65,5 @@ class Settings(BaseSettings):
     cors_allow_methods: List[str] = ["*"]
     cors_allow_headers: List[str] = ["*"]
     
-    class Config:
-        env_file = ".env"
-        case_sensitive = False
-        extra = "ignore"
-
 # Global settings instance
 settings = Settings()
